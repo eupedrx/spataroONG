@@ -1,0 +1,252 @@
+.landing-hero {
+    height: 100vh; 
+    overflow: hidden;
+    margin: 0; 
+	
+}
+
+.bg-section {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+}
+
+.bg-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block; 
+    margin: 0; 
+}
+
+.container {
+    position: relative; 
+    z-index: 2; 
+    padding: 0;
+}
+
+.title {
+    background: linear-gradient(270deg, #FF8C00, #FFD700, #FF4500, #FF8C00); 
+    background-size: 400% 400%; 
+    color: transparent; 
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradientAnimation 8s ease infinite; 
+	font-family: 'Poppins', sans-serif;
+	font-size: 80px;
+	font-weight: 400;
+	line-height: 57px;
+	margin-bottom: 27px;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%; 
+    }
+    100% {
+        background-position: 0% 50%; 
+    }
+}
+
+.title1{
+    font-weight: 700 !important;
+    line-height: 80px !important;
+}
+
+.btn {
+	font-family: 'Poppins', sans-serif;
+	position: relative;
+	z-index: 2;
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-align: center;
+	border-radius: 0;
+	padding: 0;
+	line-height: 50px;
+	width: 200px;
+	height: 50px;
+}
+
+.subtitle {
+	margin-top: -10px;
+}
+
+.footer-7 .widget--info-box i {
+	color: #ffffff;
+	-webkit-transition: all 0.35s;
+	-moz-transition: all 0.35s;
+	-o-transition: all 0.35s;
+	transition: all 0.35s;
+	max-height: 500px;
+	overflow: hidden;
+}
+
+.heading--subtitle {
+	max-width: 50%;
+	margin: 0 auto;   
+	font-size: 16px;
+	text-align: center;
+}
+
+.heading--subtitle1 {
+	max-width: 100%;
+	margin: 0 auto;   
+	font-size: 16px;
+	text-align: center;
+}
+
+.portfolio-img video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+	border: none;
+}
+
+
+.footer-7 .widget--info-box i:hover {
+	color: #f5af00;
+	-webkit-transform: translateY(-6px);
+	-moz-transform: translateY(-6px);
+	-o-transform: translateY(-6px);
+	transform: translateY(-6px);
+}
+
+.footer-7 .widget--info-box h4 {
+	color: #ffffff;
+}
+
+.header-fixed .navbar {
+    background-color: #333333; 
+    transition: background-color 0.3s ease;
+}
+
+.header-fixed .affix {
+	background-color: #ffffff;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.09);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.09);
+	-ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.09);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.09);
+	display: block;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-nav .social-icons {
+    display: flex;
+    align-items: center; 
+}
+
+.navbar-nav .social-icons a {
+    margin-left: 15px; 
+    font-size: 15px; 
+    color: #f5af00; 
+    vertical-align: middle; 
+    display: inline-block; 
+}
+
+.navbar-nav li {
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+}
+
+.line {
+    width: 50%; 
+    height: 2px; 
+    background-color: orange;
+    margin: 10px auto; 
+    margin-bottom: 3%;
+}
+
+.fas {
+    margin-left: 8px;
+}
+
+.dropdown--menu {
+    display: none;
+}
+
+ul li:hover .dropdown--menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: -10px; 
+    background-color: #333333;
+    padding: 5px 0;
+    min-width: 160px;
+    border-radius: 0 0 5px 5px;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+ul li:hover .dropdown--menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul li:hover .dropdown--menu ul li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: block;
+    text-align: left; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+ul li:hover .dropdown--menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+ul li:hover .dropdown--menu ul li:hover {
+    transform: translateX(5px);
+}
+
+ul li:hover .dropdown--menu a:hover {
+    color: #ffcc33;
+}
+
+.header-fixed .navbar.affix .dropdown--menu {
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.09); 
+}
+
+.header-fixed .navbar.affix .dropdown--menu ul li a {
+    color: #333333; 
+}
+
+.header-fixed .navbar.affix .dropdown--menu ul li a:hover {
+    color: #f5af00; 
+}
+
+/* Estilo para o caret do dropdown */
+.header-fixed .navbar.affix .nav > li > a i {
+    color: #333333; 
+}
+
+.header-fixed .navbar.affix .nav > li > a:hover i {
+    color: #f5af00; 
+}
+
+/* Ajustes no mobile */
+@media (max-width: 768px) {
+    .header-fixed .navbar.affix .dropdown--menu {
+        background-color: #ffffff;
+    }
+}
