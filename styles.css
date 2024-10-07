@@ -4,6 +4,21 @@ h1{
 
 #sobre{
     background-color: #09509E;
-    height: 1380px;
+    height: 700px;
     width: auto;
+    display: flex;
+    justify-content: center;     /* Centraliza horizontalmente */
+    align-items: center; 
+}
+
+#fundoTexto{
+
+  background-color: black;
+  height: 500px;
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
 }
