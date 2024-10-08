@@ -1,10 +1,20 @@
-h1{
-    color: blue;
+
+body {
+  overflow-x: hidden;
+}
+
+
+#carrosel{
+  width: 100vw; /* 100% da largura da viewport */
+  height: 100vh;
+  background-image: url(src/Fundo.jpeg);
+  background-size: cover; /* Faz a imagem preencher toda a área */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
 }
 
 #sobre{
     background-color: #09509E;
-    height: 700px;
+    height: 100vh;
     width: auto;
     display: flex;
     justify-content: center;     /* Centraliza horizontalmente */
@@ -19,6 +29,5 @@ h1{
   display: flex;
   align-items: center;
   justify-content: center;
-
 
 }
