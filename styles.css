@@ -31,3 +31,23 @@ body {
   justify-content: center;
 
 }
+
+
+/* Estilos para telas menores que 768px (celulares) */
+@media only screen and (max-width: 768px) {
+  #fundoTexto {
+    width: 90%;  /* Ajuste de largura para telas pequenas */
+    height: auto;  /* Deixe a altura ajustar automaticamente */
+  }
+  
+  #carrosel {
+    height: 50vh; /* Reduza a altura do carrocel em telas pequenas */
+  }
+}
+
+/* Estilos para telas menores que 1024px (tablets) */
+@media only screen and (max-width: 1024px) {
+  #fundoTexto {
+    width: 95%;  /* Mais flexibilidade para tablets */
+  }
+}
