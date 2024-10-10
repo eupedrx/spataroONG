@@ -81,6 +81,9 @@ body {
   background-color: #333; /* Ajuste de cor para diferenciação */
 }
 
+h3{
+  font-size: 20px;
+}
 /* Media Queries para dispositivos menores */
 
 /* Para tablets e telas menores que 1024px */
