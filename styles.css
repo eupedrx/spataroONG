@@ -44,16 +44,16 @@ body {
   background-color: #09509E;
   min-height: 100vh; /* Garante que ocupe a tela inteira */
   display: flex;
+  flex-direction: row; /* Alinha as divs lado a lado */
   justify-content: center;
   align-items: center;
   padding: 20px;
-  flex-direction: column;
 }
 
-#fundoTexto {
+#fundoTexto, #crianca {
   background-color: black;
-  min-height: 500px; /* Altura mínima para manter consistência */
-  max-width: 1200px;
+  min-height: 400px; /* Altura mínima para manter consistência */
+  max-width: 500px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -63,6 +63,22 @@ body {
   text-align: center; /* Centraliza o texto dentro da div */
   box-sizing: border-box; /* Inclui o padding no cálculo da largura */
   border-radius: 10px; /* Um leve arredondamento para suavizar */
+
+  border-style: solid;
+  margin: 0px; /* Espaçamento entre as divs */
+}
+
+#fundoTexto {
+  background-color: black;
+  border-color: white;
+}
+
+#crianca {
+  background-image: url(src/image.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: ;
+  background-color: #333; /* Ajuste de cor para diferenciação */
 }
 
 /* Media Queries para dispositivos menores */
