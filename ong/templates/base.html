@@ -13,33 +13,35 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300i,400,400i,500,600,700,800%7CLora:400,400i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
     <!-- Stylesheets ============================================= -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="{% static 'css/stylesBase.css' %}" rel="stylesheet">
+    <link href="{% static 'stylesBase.css' %}" rel="stylesheet">
     <link href="{% static 'icons.css' %}" rel="stylesheet">
 
     <!-- Document Title ============================================= -->
-   <title>{% block title %}Spatario{% endblock %}</title>
- {% block extra_head %}{% endblock %}
+    <title>Spatario</title>
 </head>
 <body class="body-scroll">
 
-    <div id="hero" class="hero">
-        <video autoplay loop muted playsinline class="video-bg" id="hero-video">
-            <source src="{% static 'hero/hero-hero.mp4' %}" type="video/mp4">
-        </video>
-        <div class="hero-content text-center mt-5">
-            <h1>SPATARIO</h1>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <button class="discover-button">Explore</button>
-        </div>
-    </div>    
-
+    <header>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <img src="{%  static 'img-sparta/SPATARIOwhite_1.png' %}" alt="Spatario Logo" class="hero-logo">
+                <span class="hero-title">Futebol para: <b>Sonhar. Aprender. Crescer.</b></span>
+                <button class="discover-button"><a href="#sobre">Explore</a></button>
+            </div>
+            <div class="transition-overlay"></div>
+        </section>
+    </header>
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand ms-5" href="#">
-                <img src="{% static 'images/DOElogo.png' %}" width="300" height="90" alt="">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'images/DOElogo.png' %}" width="200" height="70" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -47,17 +49,10 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav d-flex flex-row">
                     <li class="nav-item active">
-                        <a class="nav-link fs-5 me-4" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link fs-5 me-4" href="#">Home<span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle fs-5 me-4" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Projetos
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item fs-5" href="#">S</a>
-                            <a class="dropdown-item fs-5" href="#">Another action</a>
-                            <a class="dropdown-item fs-5" href="#">Something else here</a>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 me-4" href="#">Projetos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fs-5 me-4" href="#">Sobre Nós</a>
@@ -66,74 +61,242 @@
                         <a class="nav-link fs-5 me-4" href="#">Contato</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-5 me-4" href="login/">Area Gestor</a>
+                        <a class="nav-link fs-5 me-4" href="#">Área Gestor</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section id="menu">
-        <div id="meninoBola">
-            <div id="menuLista"></div>
+    <section id="sobre" class="d-flex align-items-center bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 d-flex justify-content-center">
+                    <div id="crianca" class="fade-in"></div>
+                </div>
+
+                <div class="col-md-6">
+                    <div id="fundoTexto" class="p-4 text-white bg-dark rounded">
+                        <p class="textoSobre mt-4 mb-4">
+                            A <b>Spartario</b> é uma <b>organização não governamental (ONG)</b> localizada no <b>Morro da Providência</b>, uma das comunidades mais tradicionais e históricas do <b>Rio de Janeiro</b>.
+                        </p>
+                        <p class="textoSobre mb-4">
+                            Desde a sua fundação em 1987, a <b>Spartario</b> tem se dedicado à promoção e defesa dos <b>direitos da criança e do adolescente</b>, buscando proporcionar <b>oportunidades</b> e <b>um futuro melhor</b> para <b>jovens em situação de vulnerabilidade social</b>.
+                        </p>
+                        
+                        <a href="#" class="btn d-block mx-auto">Sobre Nós</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-        <section id="sobre">
-            <div id="crianca"></div>
-            <div id="fundoTexto">
-                <h3 class="textoSobre">What is Lorem Ipsum?
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h3>
-            </div>
-        </section>
-
-    <section id="parallax" class="fade-in parallax">
+    <section id="parallax-1" class="parallax">
         <div class="parallax-content">
-            <h1 class="parallax-title">Lorem ipsum dolor</h1>
+            <h1 class="parallax-title">Formando campeões dentro e fora de jogo.</h1>
         </div>
     </section>
 
     <section id="concept" class="projetos py-5 mt-5">
-            <h2 class="section-title text-center mb-5">CONCEITO</h2>
+        <h2 class="section-title text-center mb-5">NOSSO TRABALHO</h2>
     
-            <div id="projetos" class="row align-items-center mb-5">
-                <div class="col-md-6">
-                    <img itemprop="image" src="{% static 'img/futebol-2.jpg' %}" alt="Comemoração Futebol" class="fade-in projetos-img img-fluid">
-                </div>
-                <div class="col-md-6 d-flex flex-column align-items-start px-3">
-                    <h2 class="content-title">PROJETOS</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac ipsum sit amet justo convallis scelerisque.
-                        Nullam viverra, sapien vel malesuada fermentum, est risus dignissim elit, sed convallis est erat nec ex.</p>
-                    <div class="saiba-mais-container">
-                        <a href="projetos.html" class="saiba-mais-texto">Saiba Mais</a>
-                        <div class="linha-animada"></div>
-                    </div>
+        <div id="projetos" class="row align-items-center mb-5">
+            <div class="col-md-6">
+                <img itemprop="image" src="{% static 'img-sparta/img-2.jpg' %}" alt="Comemoração Futebol" class="fade-in projetos-img img-fluid">
+            </div>
+            <div class="col-md-6 d-flex flex-column align-items-start px-3">
+                <h2 class="content-title">PROJETO SPARTA</h2>
+                <p>Nossos projetos buscam promover o crescimento integral dos jovens, oferecendo atividades educativas, culturais e esportivas. 
+                    A ONG funciona como uma <b>escolinha</b>, onde os participantes têm acesso a diversos programas que os ajudam
+                     a aprender e se desenvolver. Entre esses projetos, destaca-se a <b>primeira e única escolinha de futsal</b> 
+                     da comunidade (<b>SPARTA</b>), que oferece aos jovens a oportunidade de aprender o esporte de maneira organizada e
+                     com acompanhamento especializado.</p>
+    
+                <div class="saiba-mais-container">
+                    <a href="#" class="saiba-mais-texto">Saiba Mais</a>
+                    <div class="linha-animada"></div>
                 </div>
             </div>
+        </div>
     
-            <div id="oficina" class="row align-items-center mt-5">
-                <div class="col-md-6 d-flex flex-column align-items-start px-5">
-                    <h2 class="content-title">OFICINA</h2>
-                    <p>Nullam viverra sapien vel malesuada fermentum, est risus dignissim elit, sed convallis est erat nec ex.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac ipsum sit amet justo convallis scelerisque. Nullam viverra sapien vel malesuada fermentum, est risus dignissim elit, sed convallis est erat nec ex.</p>
-                    <div class="saiba-mais-container">
-                        <a href="oficina.html" class="saiba-mais-texto">Saiba Mais</a>
-                        <div class="linha-animada"></div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <img itemprop="image" src="{% static 'img/futebol-3.jpg' %}" alt="Imagem da Oficina" class="fade-in oficina-img img-fluid">
+        <div id="oficina" class="row align-items-center mt-5">
+            <div class="col-md-6 d-flex flex-column align-items-start px-5">
+                <h2 class="content-title">DOE</h2>
+                <p>Com a sua <strong>ajuda</strong>, podemos transformar a vida de mais crianças e jovens! Sua contribuição nos permite manter projetos como a <b>Escolinha de Futsal Sparta</b>, a <b>Oficina de Artes</b>, o <b>Brincar para Aprender</b> e o <b>Clublinho Literário</b>, que promovem o desenvolvimento e a educação de maneira lúdica e inclusiva.</p>
+                <p>Ao doar, você está <strong>investindo no futuro</strong> e oferecendo novas oportunidades para crianças em nossa comunidade. <strong>Faça sua doação agora</strong> e seja parte dessa transformação!</p>
+                <div class="saiba-mais-container">
+                <a href="link_para_doacao" target="_blank" class="saiba-mais-texto">Doe Agora</a>
+                 <div class="linha-animada"></div>
+            </div>
+            </div>
+            <div class="col-md-6">
+                <img itemprop="image" src="{% static 'img-sparta/img-1.jpg' %}" alt="Imagem da Oficina" class="fade-in oficina-img img-fluid">
+            </div>
+        </div>
+    
+        <div id="c1" class="row align-items-center">
+            <div class="col-md-6">
+                <img itemprop="image" src="{% static 'img-sparta/img-3.jpg' %}" alt="Comemoração Futebol" class="fade-in projetos-img img-fluid">
+            </div>
+            <div class="col-md-6 d-flex flex-column align-items-start px-3">
+                <h2 class="content-title">INTERAJA COM A SPARTA</h2>
+                <p><strong>Queremos seu apoio!</strong> <a href="link_para_voluntario" target="_blank"><strong>Seja voluntário</strong></a> ou <a href="link_para_matricula" target="_blank"><strong>matricule seu pequeno</strong></a> para fazer parte dos nossos campeões. Entre em contato conosco para tirar dúvidas, sugerir ideias ou conhecer mais sobre nossos projetos e atividades. Acompanhe também nossas redes sociais e fique por dentro de tudo o que acontece. <strong>Juntos, podemos alcançar ainda mais!</strong></p>
+                <div class="saiba-mais-container">
+                    <a href="#" class="saiba-mais-texto">ENTRE EM CONTATO</a>
+                    <div class="linha-animada"></div>
                 </div>
             </div>
+        </div>
     </section>    
-
+    
     <section id="image-row" class="d-flex mt-5">
-        <img src="{% static 'img/row1.png' %}" alt="Image 1" class="fade-in darken-img">
+        <img src="{% static 'img-sparta/img-4.jpg' %}" alt="Image 1" class="fade-in darken-img">
         <img src="{% static 'img/row2.png' %}" alt="Image 2" class="fade-in darken-img">
-        <img src="{% static 'img/row3.png' %}" alt="Image 3" class="fade-in darken-img">
+        <img src="{% static 'img-sparta/img-16.png' %}" alt="Image 3" class="fade-in darken-img">
         <img src="{% static 'img/row4.png' %}" alt="Image 4" class="fade-in darken-img">
     </section>
-
+        
+    <section class="upcoming-events mt-5">
+        <h2 class="text-center section-title">GALERIA</h2>
+        <div class="container-1">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="event-card">
+                        <img src="{% static 'img-sparta/img-11.jpg' %}" alt="Event 1" class="img-fluid fade-in">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="event-card">
+                        <img src="{% static 'img-sparta/img-8.jpg' %}" alt="Event 2" class="img-fluid fade-in">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="event-card">
+                        <img src="{% static 'img-sparta/img-10.jpg' %}" alt="Event 3" class="img-fluid fade-in">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="event-card">
+                        <img src="{% static 'img-sparta/img-15.jpg' %}" alt="Event 4" class="img-fluid fade-in">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="event-card">
+                        <img src="{% static 'img-sparta/img-20.jpg' %}" alt="Event 5" class="img-fluid fade-in">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="event-card">
+                        <img src="{% static 'img-sparta/img-5.jpg' %}" alt="Event 6" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+      
+    <section id="accessibility-section" class="d-flex align-items-start justify-content-between mt-5">
+        <div class="text-content col-md-8 me-5">
+            <h2>SEJA UM VOLUNTÁRIO</h2>
+            <p class="mb-4">
+                Na <strong>ONG Spatario</strong>, sua contribuição é essencial para o <strong>desenvolvimento e ensino</strong> de crianças da nossa comunidade — você pode fazer a diferença na vida desses jovens campeões.
+            </p>
+            <ul class="mx-5 mb-4">
+                <li>Ajude no desenvolvimento de habilidades esportivas e educacionais.</li>
+                <li>Compartilhe sua experiência.</li>
+                <li>Compartilhe seu <i>conhecimento</i>.</li>
+            </ul>
+            <p class="mb-4">
+                Junte-se a nós e ajude a transformar o futuro das crianças da Spatario. Sua ajuda é fundamental para fortalecer nossa missão.
+            </p>
+            <a href="https://wa.me/5521971251238?text=Gostaria%20de%20me%20voluntariar!" class="btn btn-primary">Entre em Contato</a>
+        </div>
+    
+        <div class="carousel-container col-md-4 ms-auto d-flex flex-column align-items-center">
+            <div id="accessibilityCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{% static 'carousel/carousel-1.jpg' %}" class="d-block w-100" alt="Imagem 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'carousel/carousel-2.jpg' %}" class="d-block w-100" alt="Imagem 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'carousel/carousel-3.jpg' %}" class="d-block w-100" alt="Imagem 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'carousel/carousel-4.jpg' %}" class="d-block w-100" alt="Imagem 4">
+                    </div>
+                </div>
+            </div>
+    
+            <div id="accessibility-indicators" class="custom-indicators mt-3 d-flex justify-content-center">
+                <div class="indicator active" data-slide="0"></div>
+                <div class="indicator" data-slide="1"></div>
+                <div class="indicator" data-slide="2"></div>
+                <div class="indicator" data-slide="3"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="parallax-2" class="parallax"> 
+        <div class="parallax-content">
+            <h1 class="parallax-title">
+                <i class="fas fa-map-marker-alt"></i> 
+                <a href="https://www.google.com/maps?q=Morro+da+Provid%C3%AAncia&hl=pt-BR" target="_blank">MORRO DA PROVIDÊNCIA</a>
+            </h1>
+        </div>
+    </section>
+    
+    <section id="volunteer-section" class="d-flex align-items-start justify-content-between mt-5">
+        <div class="carousel-container col-md-4 me-5 d-flex flex-column align-items-center">
+            <div id="volunteerCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="200">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{% static 'img-sparta/img-12.jpg' %}" class="d-block w-100" alt="Imagem 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'img-sparta/img-14.jpg' %}" class="d-block w-100" alt="Imagem 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'img-sparta/img-21.jpg' %}" class="d-block w-100" alt="Imagem 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'img-sparta/img-9.jpg' %}" class="d-block w-100" alt="Imagem 4">
+                    </div>
+                </div>
+            </div>
+    
+            <div id="volunteer-indicators" class="custom-indicators mt-3 d-flex justify-content-center">
+                <div class="indicator active" data-slide="0"></div>
+                <div class="indicator" data-slide="1"></div>
+                <div class="indicator" data-slide="2"></div>
+                <div class="indicator" data-slide="3"></div>
+            </div>
+        </div>
+    
+        <div class="volunteer-content col-md-8 ms-5">
+            <h2 class="mt-4 mb-5">DESEJA MATRICULAR?</h2>
+            <p>
+                Matricular seu filho na <strong>ONG Spatario</strong> é oferecer uma chance única de desenvolvimento. Com programas educativos e esportivos como a <b>Escolinha de Futsal Sparta</b> e atividades de aprendizado criativo, seu filho terá a oportunidade de crescer em um ambiente acolhedor e estimulante, onde o foco é o desenvolvimento integral e a inclusão social.
+            </p>
+    
+            <p class="mb-4">
+                Além de aprimorar habilidades esportivas e cognitivas, a <strong>ONG Spatario</strong> oferece um espaço seguro onde as crianças podem desenvolver sua criatividade e valores importantes como respeito, trabalho em equipe e perseverança. 
+            </p>
+            <a href="https://wa.me/5521971251238?text=Gostaria%20de%20matricular%20meu%20filho%20na%20ONG%20Spatario!" class="btn btn-success" target="_blank">Saiba Mais</a>
+        </div>
+    </section>
+    
+    <section id="image-row" class="d-flex mt-5">
+        <img src="{% static 'img-sparta/img-row1.png' %}" alt="Image 1" class="fade-in darken-img">
+        <img src="{% static 'img-sparta/img-row3.png' %}" alt="Image 2" class="fade-in darken-img">
+        <img src="{% static 'img-sparta/img-row2.png' %}" alt="Image 3" class="fade-in darken-img">
+        <img src="{% static 'img-sparta/img-row4.png' %}" alt="Image 4" class="fade-in darken-img">
+    </section>
+    
     <footer id="footer" class="footer-section">
         <div class="waves">
             <div class="wave" id="wave1"></div>
@@ -158,7 +321,7 @@
                             <i class="fas fa-phone"></i>
                             <div class="cta-text">
                                 <h4>Entre em Contato</h4>
-                                <span>(21) 99251-5339</span>
+                                <span>+55 (21) 97125-1238</span>
                             </div>
                         </div>
                     </div>
@@ -200,8 +363,7 @@
                             <ul>
                                 <li><a href="#">Página Inicial</a></li>
                                 <li><a href="#">Sobre Nós</a></li>
-                                <li><a href="#">Serviços</a></li>
-                                <li><a href="#">Seja um Voluntário</a></li>
+                                <li><a href="#volunteer-section">Seja um Voluntário</a></li>
                                 <li><a href="#">Doe</a></li>
                                 <li><a href="#">Mapa</a></li>
                             </ul>
@@ -222,19 +384,13 @@
                                 </form>
                             </div>
                             <div class="social-buttons">
-                                <a href="#" class="social-button social-button--facebook" aria-label="Facebook">
-                                    <i class="fab fa-facebook-f"></i>
+                                <a href="https://www.tiktok.com/@spatario" class="social-button social-button--tiktok" aria-label="TikTok">
+                                    <i class="fab fa-tiktok"></i>
                                 </a>
-                                <a href="#" class="social-button social-button--linkedin" aria-label="LinkedIn">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#" class="social-button social-button--instagram" aria-label="Instagram">
+                                <a href="https://www.instagram.com/ongspartario/" class="social-button social-button--instagram" aria-label="Instagram">
                                     <i class="fab fa-instagram"></i>
                                 </a>
-                                <a href="#" class="social-button social-button--github" aria-label="GitHub">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="#" class="social-button social-button--mail" aria-label="Gmail">
+                                <a href="mailto:ongspartario@gmail.com" class="social-button social-button--mail" aria-label="Gmail">
                                     <i class="fab fa-google"></i>
                                 </a>
                             </div>
@@ -248,7 +404,7 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-6 text-center text-lg-left">
                         <div class="copyright-text">
-                            <p>Copyright &copy; 2024, All Right Reserved • <a href="#">UniLaSalle</a></p>
+                            <p>Copyright &copy; 2024, All Right Reserved • <a href="#">SPARTA</a></p>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
@@ -265,11 +421,13 @@
                 </div>
             </div>
         </div>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-</body>
-</html>
+        </footer>
+        
+        <!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="{% static 'js/scripts.js' %}"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+        </body>
+        </html>
+        

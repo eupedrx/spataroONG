@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Fonts Google API ============================================= -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300i,400,400i,500,600,700,800%7CLora:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets ============================================= -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="{% static 'icons.css' %}" rel="stylesheet">
+
+<title>Área Restrita</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand ms-5" href="#">
+            <img src="../../static/images/DOElogo.png" width="300" height="90" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end me-5" id="navbarNavDropdown">
+            <ul class="navbar-nav d-flex flex-row">
+                <li class="nav-item active">
+                    <a class="nav-link fs-3" href="../base.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <!--LOGIN-->
+
+    <div class="login-page">
+        <div class="form">
+          <form  method="POST" action="{% url 'login' %}?next=/area-restrita/">
+            {% csrf_token %}
+            <h2>Bem-Vindo Gestor!</h2>
+            <input type="text" name="username" placeholder="Nome" required/>
+            <input type="password" name="password" placeholder="Senha" required/>
+            <button type="submit">login</button>
+          </form>
+          {% if form.non_field_errors %}
+                <div class="alert alert-danger mt-2">
+                    <p><strong>Erro:</strong> O nome de usuário ou a senha estão incorretos. Tente novamente.</p>
+                </div>
+            {% endif %}
+        </div>
+      </div>
+
+    <script src="../../static/js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+{% load static %}
+<!DOCTYPE html> 
+<html dir="ltr" lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="zytheme"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Sobre Nós">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300i,400,400i,500,600,700,800%7CLora:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="{% static 'stylesBase.css' %}" rel="stylesheet">
+    <link href="{% static 'icons.css' %}" rel="stylesheet">
+
+    <title>Spatario</title>
+</head>
+<body id="pagina-footer-vermelho" class="body-scroll">
+
+    <header>
+        <section id="parallax-3" class="parallax">
+            <div class="parallax-content">
+                <h1 class="parallax-title">NÃO É SÓ SOBRE <i>ESPORTE</i>.</h1>
+            </div>
+            <div class="parallax-overlay"></div>
+        </section>
+    </header>
+    
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'images/DOElogo.png' %}" width="200" height="70" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav d-flex flex-row">
+                <li class="nav-item active">
+                    <a class="nav-link fs-5 me-4" href="#">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link  fs-5 me-4" href="#" aria-haspopup="true" aria-expanded="false">
+                        Projetos
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-5 me-4" href="#">Sobre Nós</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-5 me-4" href="#">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-5 me-4" href="#">Área Gestor</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="about-us">
+
+<div id="service-section" class="container-fluid service-section py-5">
+  <div class="row text-center">
+    <div class="col-md-4 service-item fade-in">
+      <div class="icon">
+        <img src="{% static 'icons/Give a care.png' %}" alt="Donation Icon">
+      </div>
+      <h3>VISÃO DA ONG</h3>
+      <p>
+        Oferecer um futuro melhor para as crianças e<br> adolescentes do Morro da Providência,<br> Pedra Lisa e entorno.
+      </p>
+    </div>
+    <div class="col-md-4 service-item fade-in">
+      <div class="icon">
+        <img src="{% static 'icons/Volunteer.png' %}" alt="Volunteer Icon">
+      </div>
+      <h3>VALORES</h3>
+      <p>
+        Acolhimento; Respeito; Comprometimento;<br> Cooperação; União; Dignidade<br> e Perseverança.
+      </p>
+    </div>
+    <div class="col-md-4 service-item fade-in">
+      <div class="icon">
+        <img src="{% static 'icons/Do with heart.png' %}" alt="Education Icon">
+      </div>
+      <h3>NOSSA MISSÃO</h3>
+      <p>
+        Apresentar novas perspectivas de vida as crianças e adolescentes, através do acolhimento,<br> esporte e do brincar.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container about-section mt-5">
+  <div class="row mb-4">
+
+    <div class="col-md-12">
+      <div class="header-container">
+        <h2 class="about-header fade-in">QUEM SOMOS</h2>
+        <div class="subtitle-container">
+          <div class="vertical-line"></div> 
+          <p class="about-description fade-in">SPARTA, fundada em 12 de outubro de 1987, é uma entidade sem fins lucrativos, que desenvolve projetos sociais na área da educação, esporte e cultura com crianças e adolescentes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row fade-in">
+    <div class="col-md-6">
+        <div id="aboutAccordion" class="accordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        DIRETORA <span class="accordion-icon">+</span>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#aboutAccordion">
+                    <div class="accordion-body">
+                        <i>Informações sobre a Thaís.</i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        ESPAÇOS <span class="accordion-icon">+</span>
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#aboutAccordion">
+                    <div class="accordion-body">
+                        Desde sua fundação, o SPARTA se dedica a projetos sociais que promovem inclusão, diversidade, liberdade de expressão, educação social e cultura. Entre seus projetos, destaca-se a <i>Escolinha de Futsal</i>, em parceria com a <b>Help Mij Leven</b> desde 1998, que integra crianças e adolescentes ao esporte através de atividades de futsal e futebol, realizadas no Campo da Vila Olímpica da Gamboa. Outro projeto notável é o <i>Espaço Cultural SPARTA – Escolinha da Pedra Lisa</i>, criado em 2005, único na <b>Comunidade da Pedra Lisa</b>, que visa formar cidadãos conscientes e comprometidos com a comunidade por meio de atividades lúdicas.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        PROJETO INCENTIVADO <span class="accordion-icon">+</span>
+                    </button>
+                </h2>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#aboutAccordion">
+                    <div class="accordion-body">
+                        Nossos projetos estão enquadrados na Lei Federal de Incentivo ao Esporte, que permite que recursos provenientes de renúncia fiscal sejam aplicados em projetos esportivos.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-5">
+        <div class="about-video mx-5">
+            <iframe width="90%" height="300" src="https://youtu.be/NHhTMh0nURA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+</section>
+
+<section id="impact-numbers" class="d-flex align-items-center justify-content-center py-5">
+    <div id="mouse-circle"></div>
+    <div class="container text-center">
+        <div class="row my-4">
+            <div class="col-md-6">
+                <div class="impact-item">
+                    <div class="line-container">
+                        <hr class="line-top">
+                    </div>
+                    <div class="number" id="number1" data-number="400">400</div>
+                    <div class="number-text">Beneficiários Diretos</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="impact-item">
+                    <div class="line-container">
+                        <hr class="line-top">
+                    </div>
+                    <div class="number" id="number2" data-number="2000">2K</div>
+                    <div class="number-text">Beneficiários Indiretos</div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col-md-6">
+                <div class="impact-item">
+                    <div class="line-container">
+                        <hr class="line-top">
+                    </div>
+                    <div class="number" id="number3" data-number="10000">+10K</div>
+                    <div class="number-text">Alunos Atendidos</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="impact-item">
+                    <div class="line-container">
+                        <hr class="line-top">
+                    </div>
+                    <div class="number" id="number4" data-number="37">37</div>
+                    <div class="number-text">Anos de Trabalho e Dedicação</div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4 last-item">
+            <div class="col-12">
+                <div class="impact-item">
+                    <div class="line-container">
+                        <hr class="line-top">
+                    </div>
+                    <div class="number" id="number5" data-number="3">03</div>
+                    <div class="number-text">Projetos de Lei do Incentivo ao Esporte Aprovados</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="supporters" class="supporters-section py-5 mt-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Apoiadores</h2>
+        <div class="supporters-logos d-flex flex-wrap justify-content-center">
+            <div class="supporter-logo m-3">
+                <img src="{% static 'logo-supporter/supporter-1.png' %}" alt="Apoiador 1" class="img-fluid">
+            </div>
+            <div class="supporter-logo m-3">
+                <img src="{% static 'logo-supporter/supporter-2.png' %}" alt="Apoiador 2" class="img-fluid">
+            </div>
+            <div class="supporter-logo m-3">
+                <img src="{% static 'logo-supporter/supporter-3.png' %}" alt="Apoiador 3" class="img-fluid">
+            </div>
+            <div class="supporter-logo m-3">
+                <img src="{% static 'logo-supporter/supporter-4.png' %}" alt="Apoiador 4" class="img-fluid">
+            </div>
+            <div class="supporter-logo m-3">
+                <img src="{% static 'logo-supporter/supporter-5.png' %}" alt="Apoiador 5" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="footer" class="footer-section">
+    <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+    </div>
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="cta-text">
+                            <h4>Encontre-nos</h4>
+                            <span>Morro da Providência, RJ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-phone"></i>
+                        <div class="cta-text">
+                            <h4>Entre em Contato</h4>
+                            <span>(21) 99251-5339</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="far fa-envelope-open"></i>
+                        <div class="cta-text">
+                            <h4>Nosso E-mail</h4>
+                            <span>spatariong@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading-1">
+                            <h3 class="t-h3">Nos siga no Instagram</h3>
+                        </div>
+                        <div class="instagram-gallery">
+                            <div class="image-container">
+                                <img src="{% static 'img/img-1.png' %}" alt="Instagram image 1">
+                                <img src="{% static 'img/img-2.png' %}" alt="Instagram image 2">
+                            </div>
+                            <div class="image-container">
+                                <img src="{% static 'img/img-3.png' %}" alt="Instagram image 3">
+                                <img src="{% static 'img/img-4.png' %}" alt="Instagram image 4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading-1">
+                            <h3>Atalhos</h3>
+                        </div>
+                        <ul>
+                            <li><a href="#">Página Inicial</a></li>
+                            <li><a href="#">Projetos</a></li>
+                            <li><a href="#">Sobre nós</a></li>
+                            <li><a href="#">Doe</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading-1">
+                            <h3>Inscreva-se</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Não perca as novidades da ONG!</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Digite seu e-mail">
+                                <button><i class="fab fa-telegram-plane"></i></button>
+                            </form>
+                        </div>
+                        <div class="social-buttons">
+                            <a href="https://www.tiktok.com/@spatario" class="social-button social-button--tiktok" aria-label="TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="https://www.instagram.com/ongspartario/" class="social-button social-button--instagram" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="mailto:ongspartario@gmail.com" class="social-button social-button--mail" aria-label="Gmail">
+                                <i class="fab fa-google"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2024, All Right Reserved • <a href="#">SPARTA</a></p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Policy</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+
+<!-- Popper.js (necessário para o Bootstrap) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="{% static 'js/scripts.js' %}"></script>
+

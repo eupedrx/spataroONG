@@ -16,6 +16,7 @@ urlpatterns = [
     #path('area-restrita/cadastro/', login_required(views.cadastro), name='cadastro'),
 
     path('home', views.home_view, name='home'),
+    path('sobrenos', views.about_us, name='sobrenos'),
     path('cadastro-crianca/', views.form_crianca, name='cadastro_crianca'),
 
     path('criancas/', views.lista_criancas, name='ver_crianca'),

@@ -10,11 +10,6 @@ from .forms import CriancaForm
 from .models import Crianca
 
 # Create your views here.
-
-def home_view(request):
-    return render(request, 'base.html')
-
-
 def my_login_view(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -101,7 +96,7 @@ def editar_crianca(request, cpf):
         if form.is_valid():
             # Salva os dados da criança após edição
             form.save()
-            return redirect('criancas')  # Ou para qualquer página que você queira redirecionar após editar
+            return redirect('ver_crianca')  # Ou para qualquer página que você queira redirecionar após editar
     else:
         # Se for uma requisição GET (quando o usuário entra na página de edição),
         # preenche o formulário com os dados da criança
@@ -113,8 +108,14 @@ def deletar_crianca(request, id):
     crianca = get_object_or_404(Crianca, id=id)  # Busca a criança pelo ID
     if request.method == 'POST':
         crianca.delete()  # Exclui a criança
-        return redirect('criancas')  # Redireciona de volta para a página de lista
-    return render(request, 'confirmar_delecao.html', {'crianca': crianca})
+        return redirect('crianca/')  # Redireciona de volta para a página de lista
+    return render(request, 'criancas.html', {'crianca': crianca})
+
+def home_view(request):
+    return render(request, 'base.html')
+
+def about_us(request):
+    return render(request, 'about-us.html')
 
 @login_required
 def area_restrita(request):
