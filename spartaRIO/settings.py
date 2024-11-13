@@ -29,6 +29,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["web-production-27a0d.up.railway.app", 'localhost', '127.0.0.1']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-production-27a0d.up.railway.app',  # Adicione o seu domínio aqui
+]
+
+CSRF_COOKIE_SECURE = True  # Apenas envia o cookie em conexões HTTPS
+CSRF_COOKIE_HTTPONLY = True  # O cookie CSRF não pode ser acessado via JavaScript
+CSRF_COOKIE_SAMESITE = 'Strict'  # Impede que o cookie seja enviado por outros domínios
+
 LOGIN_URL = '/accounts/login/'
 
 # URL de redirecionamento após login
