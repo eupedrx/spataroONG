@@ -17,9 +17,10 @@ urlpatterns = [
 
     path('home', views.home_view, name='home'),
     path('sobrenos', views.about_us, name='sobrenos'),
+    path('projetos', views.projetos, name='projetos'),
     path('cadastro-crianca/', views.form_crianca, name='cadastro_crianca'),
 
-    path('criancas/', views.lista_criancas, name='ver_crianca'),
+    path('criancas/', views.lista_criancas, name='criancas'),
 
     path('deletar-crianca/<int:id>/', views.deletar_crianca, name='deletar_crianca'),
     path('crianca/<str:cpf>/editar/', views.editar_crianca, name='editar_crianca'),

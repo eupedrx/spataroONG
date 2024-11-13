@@ -47,75 +47,65 @@ def form_crianca(request):
     return render(request, 'CadCri.html', {'form': form})
 
 def lista_criancas(request):
-    criancas = Crianca.objects.all() # Busca todas as crianças no banco de dados
-    # Filtragem
+    criancas = Crianca.objects.all()
     nome_filter = request.GET.get('filterName', '')
     nascimento_filter = request.GET.get('filterBirthdate', '')
     idade_filter = request.GET.get('filterAge', '')
 
-    # Aplica filtro por nome
     if nome_filter:
         criancas = criancas.filter(nome__icontains=nome_filter)
-
-    # Aplica filtro por data de nascimento (formato 'yyyy-mm-dd')
     if nascimento_filter:
-        criancas = criancas.filter(data_nascimento=nascimento_filter)
-
-    # Aplica filtro por idade
+        criancas = criancas.filter(nasc=nascimento_filter)
     if idade_filter:
         criancas = criancas.filter(idade=idade_filter)
+
     if request.method == 'POST':
-        # Verifica se foi enviado um 'id' da criança para deletar
         if 'limpar_filtros' in request.POST:
             return redirect('criancas')
         if 'deletar' in request.POST:
             pk = request.POST.get('deletar')
             crianca = get_object_or_404(Crianca, pk=pk)
-            crianca.delete()  # Deleta a criança
-            return redirect('criancas')  # Redireciona de volta para a lista de crianças
+            crianca.delete()
+            return redirect('criancas')
         if 'editar' in request.POST:
             pk = request.POST.get('editar')
             crianca = get_object_or_404(Crianca, pk=pk)
-            form = CriancaForm(request.POST, instance=crianca)  # Preenche o formulário com a criança existente
+            form = CriancaForm(request.POST, instance=crianca)
             if form.is_valid():
-                form.save()  # Salva a criança com as novas informações
+                form.save()
                 return redirect('criancas')
 
     context = {'criancas': criancas}
-    return render(request, 'criancas.html', {'criancas': criancas})
-
+    return render(request, 'criancas.html', context)
 
 def editar_crianca(request, cpf):
-    # Recupera a criança com o ID (pk) passado, ou retorna 404 se não encontrada
     crianca = get_object_or_404(Crianca, cpf=cpf)
-    print(crianca)
 
     if request.method == 'POST':
-        # Se for uma requisição POST, preenche o formulário com os dados do POST e com os dados atuais da criança
         form = CriancaForm(request.POST, instance=crianca)
         if form.is_valid():
-            # Salva os dados da criança após edição
             form.save()
-            return redirect('ver_crianca')  # Ou para qualquer página que você queira redirecionar após editar
+            return redirect('criancas')
     else:
-        # Se for uma requisição GET (quando o usuário entra na página de edição),
-        # preenche o formulário com os dados da criança
         form = CriancaForm(instance=crianca)
 
-    return render(request, 'editar_crianca.html', {'form': form, 'criancas': criancas})
+    return render(request, 'editar_crianca.html', {'form': form})
 
 def deletar_crianca(request, id):
-    crianca = get_object_or_404(Crianca, id=id)  # Busca a criança pelo ID
+    crianca = get_object_or_404(Crianca, id=id)
     if request.method == 'POST':
-        crianca.delete()  # Exclui a criança
-        return redirect('crianca/')  # Redireciona de volta para a página de lista
-    return render(request, 'criancas.html', {'crianca': crianca})
+        crianca.delete()
+        return redirect('criancas')
+    return render(request, 'confirmar_delecao.html', {'crianca': crianca})
 
 def home_view(request):
     return render(request, 'base.html')
 
 def about_us(request):
     return render(request, 'about-us.html')
+def projetos(request):
+    return render(request, 'projetos.html')
+
 
 @login_required
 def area_restrita(request):

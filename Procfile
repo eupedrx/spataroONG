@@ -1,0 +1,1 @@
+web: gunicorn spartaRIO.wsgi --log-file -

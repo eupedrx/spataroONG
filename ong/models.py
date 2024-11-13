@@ -5,7 +5,7 @@ class Crianca(models.Model):
     nome = models.CharField(max_length=100)
     nasc = models.DateField()
     cpf = models.CharField(max_length=14, primary_key=True, unique=True, error_messages={
-        'unique': 'Já existe uma criança cadastrada com este CPF.'})
+        'unique': 'Já existe uma crianca cadastrada com este CPF.'})
     rg = models.CharField(max_length=12)
     nomeResp = models.CharField(max_length=100)
     pais = models.CharField(max_length=50)

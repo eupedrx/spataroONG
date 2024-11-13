@@ -1,5 +1,5 @@
 $(document).ready(function () {
-   
+
     $(document).on("scroll", function () {
         const scrollPosition = $(this).scrollTop();
         $(".parallax").each(function () {
@@ -9,7 +9,7 @@ $(document).ready(function () {
         });
     });
 
-    
+
     let lastScrollTop = 0;
     $(window).on("scroll", function () {
         let scrollTop = $(this).scrollTop();
@@ -21,7 +21,7 @@ $(document).ready(function () {
         lastScrollTop = scrollTop;
     });
 
-   
+
     function checkFadeIn() {
         $(".fade-in").each(function () {
             let elementTop = $(this).offset().top;
@@ -34,7 +34,7 @@ $(document).ready(function () {
     $(window).on("scroll", checkFadeIn);
     checkFadeIn();
 
-    
+
     function initializeCarousel(carouselId, indicatorsId) {
         $(carouselId).carousel({ interval: 2000 });
         $(carouselId).on('slid.bs.carousel', function () {
@@ -51,25 +51,25 @@ $(document).ready(function () {
     }
     initializeCarousel('#accessibilityCarousel', '#accessibility-indicators');
     initializeCarousel('#volunteerCarousel', '#volunteer-indicators');
-      
+
     $(document).ready(function() {
-        
+
         $('#aboutAccordion').on('show.bs.collapse', function (e) {
-            
+
             $(e.target).prev('.accordion-header').find('.accordion-button i')
                 .removeClass('fas fa-plus')
                 .addClass('fas fa-minus');
         });
-    
-       
+
+
         $('#aboutAccordion').on('hide.bs.collapse', function (e) {
-            
+
             $(e.target).prev('.accordion-header').find('.accordion-button i')
                 .removeClass('fas fa-minus')
                 .addClass('fas fa-plus');
         });
     });
- 
+
     let isOverlayVisible = false;
 
 setInterval(() => {
@@ -80,68 +80,68 @@ setInterval(() => {
         overlay.style.opacity = 1;
     }
     isOverlayVisible = !isOverlayVisible;
-}, 4000); 
+}, 4000);
 
 
-  
+
 });
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    
+
     if (document.body.id === 'pagina-footer-vermelho') {
-       
+
         let footer = document.getElementById('footer');
 
-       
+
         footer.classList.add('footer-vermelho-section');
-        
-      
+
+
         let icons = footer.querySelectorAll('.single-cta i');
         icons.forEach(icon => {
-            icon.style.color = '#e62d2d'; 
+            icon.style.color = '#e62d2d';
         });
 
-        
+
         let subscribeButton = footer.querySelector('.subscribe-form button');
         if (subscribeButton) {
-            subscribeButton.style.backgroundColor = '#e62d2d'; 
-            subscribeButton.style.borderColor = '#e62d2d'; 
+            subscribeButton.style.backgroundColor = '#e62d2d';
+            subscribeButton.style.borderColor = '#e62d2d';
         }
 
-       
+
         let headings = footer.querySelectorAll('.footer-widget-heading h3');
         headings.forEach(heading => {
             heading.style.color = '#fff';
 
-          
+
             let style = document.createElement('style');
             style.innerHTML = `
                 .footer-widget-heading h3::before {
                     background: #e62d2d; /* Traço vermelho */
                 }
             `;
-            document.head.appendChild(style); 
+            document.head.appendChild(style);
         });
 
         let inputEmail = footer.querySelector('.subscribe-form input');
         if (inputEmail) {
             inputEmail.style.backgroundColor = '#fff';
-            inputEmail.style.borderColor = '#fff'; 
-            inputEmail.style.color = '#151414'; 
+            inputEmail.style.borderColor = '#fff';
+            inputEmail.style.color = '#151414';
         }
 
-       
+
         let copyrightLink = footer.querySelector('.copyright-text p a');
         if (copyrightLink) {
-            copyrightLink.style.color = '#e62d2d'; 
+            copyrightLink.style.color = '#e62d2d';
         }
     }
 
-    
+
 $(document).ready(function() {
     function animateNumber(id, targetNumber, delay) {
-      
+
         $({ countNum: 0 }).animate({ countNum: targetNumber }, {
             duration: 2000,
             easing: 'swing',
@@ -149,12 +149,12 @@ $(document).ready(function() {
                 $('#' + id).text(Math.floor(this.countNum));
             },
             complete: function() {
-                $('#' + id).text(targetNumber); 
+                $('#' + id).text(targetNumber);
             }
         });
     }
 
-   
+
     const numbers = [
         { id: 'number1', target: 400 },
         { id: 'number2', target: 2000 },
@@ -163,10 +163,10 @@ $(document).ready(function() {
         { id: 'number5', target: 3 }
     ];
 
-   
+
     numbers.forEach((item, index) => {
         setTimeout(() => {
-            animateNumber(item.id, item.target, index * 500); 
+            animateNumber(item.id, item.target, index * 500);
         }, index * 500);
     });
 });
@@ -185,12 +185,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     impactSection.addEventListener("mousemove", (e) => {
-       
+
         const rect = impactSection.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
 
-       
+
         mouseCircle.style.left = `${x}px`;
         mouseCircle.style.top = `${y}px`;
     });
@@ -198,17 +198,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    const eventCards = document.querySelectorAll(".event-card");  
-  
+    const eventCards = document.querySelectorAll(".event-card");
+
     eventCards.forEach(function(eventCard) {
-      const logoImage = eventCard.querySelector(".logo-image"); 
-  
+      const logoImage = eventCard.querySelector(".logo-image");
+
       eventCard.addEventListener("mouseenter", function() {
         logoImage.style.opacity = "1";
       });
-  
+
       eventCard.addEventListener("mouseleave", function() {
-        logoImage.style.opacity = "0"; 
+        logoImage.style.opacity = "0";
       });
     });
 });
