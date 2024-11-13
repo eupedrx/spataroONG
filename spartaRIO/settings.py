@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-^9qpezlfz1^a@f$m*-h#nlrl7uw_w527#b-rfur@(+_ef)b=)u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["web-production-27a0d.up.railway.app"]
+ALLOWED_HOSTS = ["web-production-27a0d.up.railway.app", 'localhost', '127.0.0.1']
 
 LOGIN_URL = '/accounts/login/'
 
@@ -133,12 +133,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STORAGES = {
-    # ...
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
