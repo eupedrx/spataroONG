@@ -90,10 +90,6 @@ python manage.py runserver
 
 7. Acesse o projeto em: `http://localhost:8000`
 
-## 🌐 Deploy
-
-O projeto está hospedado na Vercel e pode ser acessado em: [spataro-ong.vercel.app](https://spataro-ong.vercel.app)
-
 ## 📝 Conceitos e Práticas Aplicadas
 
 - **Framework Django:** MVT (Model-View-Template)
