@@ -2,7 +2,7 @@
 
 Website institucional completo desenvolvido para uma ONG como projeto de extensão universitária, utilizando Django como framework principal.
 
-🌐 **Deploy:** [spataro.ong]([https://spataro-ong.vercel.app](https://web-production-c304.up.railway.app/home))
+🌐 **Deploy:** [spataro.ong](https://web-production-c304.up.railway.app/home)
 
 ## 📋 Sobre o Projeto
 
